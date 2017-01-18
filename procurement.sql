@@ -51,6 +51,45 @@ DELETE FROM `assets_debt_info`;
 /*!40000 ALTER TABLE `assets_debt_info` ENABLE KEYS */;
 
 
+-- Dumping structure for table procurement.materialdetails
+CREATE TABLE IF NOT EXISTS `materialdetails` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) DEFAULT NULL,
+  `materialdetail` varchar(500) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table procurement.materialdetails: ~2 rows (approximately)
+DELETE FROM `materialdetails`;
+/*!40000 ALTER TABLE `materialdetails` DISABLE KEYS */;
+INSERT INTO `materialdetails` (`id`, `name`, `materialdetail`, `created_at`, `updated_at`) VALUES
+	(1, NULL, '1', '2017-01-18 10:43:49', '2017-01-18 10:43:49'),
+	(2, NULL, '2', '2017-01-18 10:43:53', '2017-01-18 10:43:53');
+/*!40000 ALTER TABLE `materialdetails` ENABLE KEYS */;
+
+
+-- Dumping structure for table procurement.materialsreqforms
+CREATE TABLE IF NOT EXISTS `materialsreqforms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) DEFAULT NULL,
+  `materialsreqform` varchar(500) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table procurement.materialsreqforms: ~3 rows (approximately)
+DELETE FROM `materialsreqforms`;
+/*!40000 ALTER TABLE `materialsreqforms` DISABLE KEYS */;
+INSERT INTO `materialsreqforms` (`id`, `name`, `materialsreqform`, `created_at`, `updated_at`) VALUES
+	(49, NULL, '1', '2017-01-18 10:50:58', '2017-01-18 10:50:58'),
+	(50, NULL, '2', '2017-01-18 10:51:03', '2017-01-18 10:51:03'),
+	(51, NULL, '12', '2017-01-18 10:53:36', '2017-01-18 10:53:36');
+/*!40000 ALTER TABLE `materialsreqforms` ENABLE KEYS */;
+
+
 -- Dumping structure for table procurement.migrations
 CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -85,6 +124,24 @@ DELETE FROM `password_resets`;
 /*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
 
 
+-- Dumping structure for table procurement.productprocurements
+CREATE TABLE IF NOT EXISTS `productprocurements` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) DEFAULT NULL,
+  `name12` varchar(500) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table procurement.productprocurements: ~1 rows (approximately)
+DELETE FROM `productprocurements`;
+/*!40000 ALTER TABLE `productprocurements` DISABLE KEYS */;
+INSERT INTO `productprocurements` (`id`, `name`, `name12`, `created_at`, `updated_at`) VALUES
+	(49, NULL, '1', '2017-01-18 11:22:38', '2017-01-18 11:22:38');
+/*!40000 ALTER TABLE `productprocurements` ENABLE KEYS */;
+
+
 -- Dumping structure for table procurement.products
 CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -93,16 +150,38 @@ CREATE TABLE IF NOT EXISTS `products` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
 
--- Dumping data for table procurement.products: ~9 rows (approximately)
+-- Dumping data for table procurement.products: ~7 rows (approximately)
 DELETE FROM `products`;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` (`id`, `name`, `name12`, `created_at`, `updated_at`) VALUES
 	(46, NULL, '1234', '2017-01-18 08:10:50', NULL),
 	(47, NULL, '3445', '2017-01-18 08:11:26', '2017-01-18 08:11:26'),
-	(48, NULL, '12qw', '2017-01-18 08:11:32', '2017-01-18 08:11:32');
+	(48, NULL, '12qw', '2017-01-18 08:11:32', '2017-01-18 08:11:32'),
+	(49, NULL, '56', '2017-01-18 09:40:47', '2017-01-18 09:40:47'),
+	(50, NULL, '12', '2017-01-18 10:32:30', '2017-01-18 10:32:30'),
+	(51, NULL, 'as', '2017-01-18 10:39:39', '2017-01-18 10:39:39'),
+	(52, NULL, 'sd', '2017-01-18 10:39:44', '2017-01-18 10:39:44');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
+
+
+-- Dumping structure for table procurement.statuspros
+CREATE TABLE IF NOT EXISTS `statuspros` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) DEFAULT NULL,
+  `name12` varchar(500) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table procurement.statuspros: ~1 rows (approximately)
+DELETE FROM `statuspros`;
+/*!40000 ALTER TABLE `statuspros` DISABLE KEYS */;
+INSERT INTO `statuspros` (`id`, `name`, `name12`, `created_at`, `updated_at`) VALUES
+	(49, NULL, '2', '2017-01-18 11:23:32', '2017-01-18 11:23:32');
+/*!40000 ALTER TABLE `statuspros` ENABLE KEYS */;
 
 
 -- Dumping structure for table procurement.taggables
@@ -2640,6 +2719,24 @@ INSERT INTO `tags` (`id`, `name`) VALUES
 /*!40000 ALTER TABLE `tags` ENABLE KEYS */;
 
 
+-- Dumping structure for table procurement.usergroups
+CREATE TABLE IF NOT EXISTS `usergroups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) DEFAULT NULL,
+  `name12` varchar(500) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table procurement.usergroups: ~1 rows (approximately)
+DELETE FROM `usergroups`;
+/*!40000 ALTER TABLE `usergroups` DISABLE KEYS */;
+INSERT INTO `usergroups` (`id`, `name`, `name12`, `created_at`, `updated_at`) VALUES
+	(49, NULL, '2', '2017-01-18 11:24:04', '2017-01-18 11:24:04');
+/*!40000 ALTER TABLE `usergroups` ENABLE KEYS */;
+
+
 -- Dumping structure for table procurement.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -2654,12 +2751,30 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=502 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table procurement.users: ~0 rows (approximately)
+-- Dumping data for table procurement.users: ~1 rows (approximately)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-	(501, 'Noor', 'webmaster.noor@gmail.com', '$2y$10$pYhCPLAl0z2OV.rPgQFf2OEhShfkvbmm3KmidHGUhtuGoIz5mBzUS', 'LEeYMT2ftUddRNrS4Ai2BSCJZALbkaNFRPc4nwcMaoTysJYXJMWiXIW8EiuT', '2016-12-24 09:06:10', '2017-01-18 07:47:40', NULL);
+	(501, 'Noor', 'webmaster.noor@gmail.com', '$2y$10$pYhCPLAl0z2OV.rPgQFf2OEhShfkvbmm3KmidHGUhtuGoIz5mBzUS', 'f4AjQg2X5lXR2gu3jgeEiAn2T7xA0WrBy497ur8Cfr0ejLKaFmh6wStgbIvV', '2016-12-24 09:06:10', '2017-01-18 10:38:11', NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
+
+-- Dumping structure for table procurement.userspros
+CREATE TABLE IF NOT EXISTS `userspros` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) DEFAULT NULL,
+  `name12` varchar(500) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table procurement.userspros: ~1 rows (approximately)
+DELETE FROM `userspros`;
+/*!40000 ALTER TABLE `userspros` DISABLE KEYS */;
+INSERT INTO `userspros` (`id`, `name`, `name12`, `created_at`, `updated_at`) VALUES
+	(49, NULL, '23', '2017-01-18 11:24:43', '2017-01-18 11:24:43');
+/*!40000 ALTER TABLE `userspros` ENABLE KEYS */;
 
 
 -- Dumping structure for table procurement.user_post
