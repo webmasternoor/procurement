@@ -81,7 +81,7 @@
             </button>
             <a class="navbar-brand" href="{{ url('/') }}">
                 <span class="dt-icon"><i class="fa fa-th-list"></i></span>
-                টিএমএসএস এমপ্লয়িজ কো-অপারেটিভ সোসাইটি লিঃ (TECSL)</a>
+                Suppliers Chain</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
