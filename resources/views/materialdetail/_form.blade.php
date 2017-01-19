@@ -6,6 +6,13 @@
             <span id="materialdetail-error" class="help-block"></span>
         </div>
     </div>
+    <div class="form-group required col-md-6" id="form-materialdetail1-error">
+        {!! Form::label("materialdetail1","প্রোডাক্ট কোডঃ",["class"=>"control-label col-md-3"]) !!}
+        <div class="col-md-6">
+            {!! Form::text("materialdetail1",null,["class"=>"form-control required","id"=>"focus"]) !!}
+            <span id="materialdetail1-error" class="help-block"></span>
+        </div>
+    </div>
 </div>
 <div class="form-group">
     <div class="col-md-6 col-md-push-3">

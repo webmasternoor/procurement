@@ -31,6 +31,14 @@
                class="glyphicon  {{ Session::get('materialdetail_field')=='materialdetail'?(Session::get('materialdetail_sort')=='asc'?'glyphicon-sort-by-alphabet':'glyphicon-sort-by-alphabet-alt'):'' }}">
             </i>
         </th>
+        <th>
+            <a href="javascript:ajaxLoad('materialdetail/list?field=materialdetail1&sort={{Session::get("materialdetail_sort")=="asc"?"desc":"asc"}}')">
+                2 Name
+            </a>
+            <i style="font-size: 12px"
+               class="glyphicon  {{ Session::get('materialdetail_field')=='materialdetail1'?(Session::get('materialdetail_sort')=='asc'?'glyphicon-sort-by-alphabet':'glyphicon-sort-by-alphabet-alt'):'' }}">
+            </i>
+        </th>
         <th width="140px">Actions</th>
     </tr>
     </thead>
@@ -40,6 +48,7 @@
         <tr>
             <td align="center">{{$i++}}</td>
             <td>{{$materialdetail->materialdetail}}</td>
+            <td>{{$materialdetail->materialdetail1}}</td>
             <td style="text-align: center">
                 <a class="btn btn-primary btn-xs" title="Edit"
                    href="javascript:ajaxLoad('materialdetail/update/{{$materialdetail->id}}')">

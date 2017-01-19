@@ -64,6 +64,7 @@ class MaterialdetailController extends Controller
         }
         $materialdetail = new Materialdetail();
         $materialdetail->materialdetail = Input::get('materialdetail');
+        $materialdetail->materialdetail1 = Input::get('materialdetail1');
         $materialdetail->save();
         return ['url' => 'materialdetail/list'];
     }
