@@ -11,7 +11,7 @@
         <meta name="description" content="jQuery Datatables API for Laravel 4 and Laravel 5">
     @endif
 
-    <title>Procurement</title>
+    <title>SCN</title>
 
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/demo.css') }}" rel="stylesheet">
@@ -81,7 +81,7 @@
             </button>
             <a class="navbar-brand" href="{{ url('/') }}">
                 <span class="dt-icon"><i class="fa fa-th-list"></i></span>
-                Suppliers Chain</a>
+                Supply Chain Management (SCM)</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

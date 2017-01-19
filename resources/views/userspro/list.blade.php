@@ -1,4 +1,4 @@
-<h1 class="page-header">Userspro List
+<h1 class="page-header">Field Users  List
     <div class="pull-right">
         <a href="javascript:ajaxLoad('userspro/create')" class="btn btn-primary pull-right"><i
                     class="glyphicon glyphicon-plus-sign"></i> New</a>
@@ -23,6 +23,14 @@
     <thead>
     <tr>
         <th width="50px" style="text-align: center">No</th>
+        <th>
+            <a href="javascript:ajaxLoad('userspro/list?field=id&sort={{Session::get("userspro_sort")=="asc"?"desc":"asc"}}')">
+                User Id
+            </a>
+            <i style="font-size: 12px"
+               class="glyphicon  {{ Session::get('userspro_field')=='id'?(Session::get('userspro_sort')=='asc'?'glyphicon-sort-by-alphabet':'glyphicon-sort-by-alphabet-alt'):'' }}">
+            </i>
+        </th>
         <th>
             <a href="javascript:ajaxLoad('userspro/list?field=name12&sort={{Session::get("userspro_sort")=="asc"?"desc":"asc"}}')">
                 Name

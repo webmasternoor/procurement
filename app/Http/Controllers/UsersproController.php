@@ -41,7 +41,10 @@ class UsersproController extends Controller
                 'errors' => $validator->getMessageBag()->toArray()
             );
         }
-        $userspro->name12 = Input::get('name12');
+        $userspro->id = Input::get('id');
+        $userspro->project_id = Input::get('project_id');
+        $userspro->user_type = Input::get('user_type');
+        $userspro->name12= Input::get('name12');
         $userspro->save();
         return ['url' => 'userspro/list'];
     }
@@ -63,7 +66,10 @@ class UsersproController extends Controller
             );
         }
         $userspro = new Userspro();
-        $userspro->name12 = Input::get('name12');
+        $userspro->id = Input::get('id');
+        $userspro->project_id = Input::get('project_id');
+        $userspro->user_type = Input::get('user_type');
+        $userspro->name12= Input::get('name12');
         $userspro->save();
         return ['url' => 'userspro/list'];
     }

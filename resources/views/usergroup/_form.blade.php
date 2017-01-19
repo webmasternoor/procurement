@@ -1,6 +1,13 @@
 <div class="col-md-12">
+    <div class="form-group required col-md-6" id="form-user_id-error">
+        {!! Form::label("user_id","User Group Id",["class"=>"control-label col-md-3"]) !!}
+        <div class="col-md-6">
+            {!! Form::text("user_id",null,["class"=>"form-control required","id"=>"focus"]) !!}
+            <span id="user_id-error" class="help-block"></span>
+        </div>
+    </div>
     <div class="form-group required col-md-6" id="form-name12-error">
-        {!! Form::label("name12","প্রোডাক্ট কোডঃ",["class"=>"control-label col-md-3"]) !!}
+        {!! Form::label("name12","Name/Designation",["class"=>"control-label col-md-3"]) !!}
         <div class="col-md-6">
             {!! Form::text("name12",null,["class"=>"form-control required","id"=>"focus"]) !!}
             <span id="name12-error" class="help-block"></span>

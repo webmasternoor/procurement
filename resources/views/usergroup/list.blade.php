@@ -1,4 +1,4 @@
-<h1 class="page-header">Usergroup List
+<h1 class="page-header">User Group List
     <div class="pull-right">
         <a href="javascript:ajaxLoad('usergroup/create')" class="btn btn-primary pull-right"><i
                     class="glyphicon glyphicon-plus-sign"></i> New</a>
@@ -23,9 +23,17 @@
     <thead>
     <tr>
         <th width="50px" style="text-align: center">No</th>
+         <th>
+            <a href="javascript:ajaxLoad('usergroup/list?field=user_id&sort={{Session::get("usergroup_sort")=="asc"?"desc":"asc"}}')">
+                User Group Id
+            </a>
+            <i style="font-size: 12px"
+               class="glyphicon  {{ Session::get('usergroup_field')=='user_id'?(Session::get('usergroup_sort')=='asc'?'glyphicon-sort-by-alphabet':'glyphicon-sort-by-alphabet-alt'):'' }}">
+            </i>
+        </th>
         <th>
             <a href="javascript:ajaxLoad('usergroup/list?field=name12&sort={{Session::get("usergroup_sort")=="asc"?"desc":"asc"}}')">
-                Name
+                Name/Designation
             </a>
             <i style="font-size: 12px"
                class="glyphicon  {{ Session::get('usergroup_field')=='name12'?(Session::get('usergroup_sort')=='asc'?'glyphicon-sort-by-alphabet':'glyphicon-sort-by-alphabet-alt'):'' }}">
@@ -39,6 +47,7 @@
     @foreach($usergroups as $key=>$usergroup)
         <tr>
             <td align="center">{{$i++}}</td>
+            <td>{{$usergroup->id}}</td>
             <td>{{$usergroup->name12}}</td>
             <td style="text-align: center">
                 <a class="btn btn-primary btn-xs" title="Edit"

@@ -41,6 +41,7 @@ class UsergroupController extends Controller
                 'errors' => $validator->getMessageBag()->toArray()
             );
         }
+        $usergroup->user_id = Input::get('user_id');
         $usergroup->name12 = Input::get('name12');
         $usergroup->save();
         return ['url' => 'usergroup/list'];
@@ -63,6 +64,7 @@ class UsergroupController extends Controller
             );
         }
         $usergroup = new Usergroup();
+        $usergroup->user_id = Input::get('user_id');
         $usergroup->name12 = Input::get('name12');
         $usergroup->save();
         return ['url' => 'usergroup/list'];
