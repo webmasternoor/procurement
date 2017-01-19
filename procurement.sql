@@ -56,17 +56,19 @@ CREATE TABLE IF NOT EXISTS `materialdetails` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) DEFAULT NULL,
   `materialdetail` varchar(500) DEFAULT NULL,
+  `materialdetail1` varchar(500) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table procurement.materialdetails: ~2 rows (approximately)
+-- Dumping data for table procurement.materialdetails: ~3 rows (approximately)
 DELETE FROM `materialdetails`;
 /*!40000 ALTER TABLE `materialdetails` DISABLE KEYS */;
-INSERT INTO `materialdetails` (`id`, `name`, `materialdetail`, `created_at`, `updated_at`) VALUES
-	(1, NULL, '1', '2017-01-18 10:43:49', '2017-01-18 10:43:49'),
-	(2, NULL, '2', '2017-01-18 10:43:53', '2017-01-18 10:43:53');
+INSERT INTO `materialdetails` (`id`, `name`, `materialdetail`, `materialdetail1`, `created_at`, `updated_at`) VALUES
+	(1, NULL, '1', NULL, '2017-01-18 10:43:49', '2017-01-18 10:43:49'),
+	(2, NULL, '2', NULL, '2017-01-18 10:43:53', '2017-01-18 10:43:53'),
+	(3, NULL, '45', '67', '2017-01-19 03:32:37', '2017-01-19 03:32:37');
 /*!40000 ALTER TABLE `materialdetails` ENABLE KEYS */;
 
 
@@ -80,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `materialsreqforms` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
--- Dumping data for table procurement.materialsreqforms: ~3 rows (approximately)
+-- Dumping data for table procurement.materialsreqforms: ~2 rows (approximately)
 DELETE FROM `materialsreqforms`;
 /*!40000 ALTER TABLE `materialsreqforms` DISABLE KEYS */;
 INSERT INTO `materialsreqforms` (`id`, `name`, `materialsreqform`, `created_at`, `updated_at`) VALUES
@@ -134,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `productprocurements` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
--- Dumping data for table procurement.productprocurements: ~1 rows (approximately)
+-- Dumping data for table procurement.productprocurements: ~0 rows (approximately)
 DELETE FROM `productprocurements`;
 /*!40000 ALTER TABLE `productprocurements` DISABLE KEYS */;
 INSERT INTO `productprocurements` (`id`, `name`, `name12`, `created_at`, `updated_at`) VALUES
@@ -176,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `statuspros` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
--- Dumping data for table procurement.statuspros: ~1 rows (approximately)
+-- Dumping data for table procurement.statuspros: ~0 rows (approximately)
 DELETE FROM `statuspros`;
 /*!40000 ALTER TABLE `statuspros` DISABLE KEYS */;
 INSERT INTO `statuspros` (`id`, `name`, `name12`, `created_at`, `updated_at`) VALUES
@@ -2729,7 +2731,7 @@ CREATE TABLE IF NOT EXISTS `usergroups` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
--- Dumping data for table procurement.usergroups: ~1 rows (approximately)
+-- Dumping data for table procurement.usergroups: ~0 rows (approximately)
 DELETE FROM `usergroups`;
 /*!40000 ALTER TABLE `usergroups` DISABLE KEYS */;
 INSERT INTO `usergroups` (`id`, `name`, `name12`, `created_at`, `updated_at`) VALUES
@@ -2751,7 +2753,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=502 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table procurement.users: ~1 rows (approximately)
+-- Dumping data for table procurement.users: ~0 rows (approximately)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2769,7 +2771,7 @@ CREATE TABLE IF NOT EXISTS `userspros` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
--- Dumping data for table procurement.userspros: ~1 rows (approximately)
+-- Dumping data for table procurement.userspros: ~0 rows (approximately)
 DELETE FROM `userspros`;
 /*!40000 ALTER TABLE `userspros` DISABLE KEYS */;
 INSERT INTO `userspros` (`id`, `name`, `name12`, `created_at`, `updated_at`) VALUES
