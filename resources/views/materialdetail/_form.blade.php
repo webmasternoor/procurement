@@ -1,13 +1,13 @@
 <div class="col-md-12">
     <div class="form-group required col-md-6" id="form-materialdetail-error">
-        {!! Form::label("materialdetail","প্রোডাক্ট কোডঃ",["class"=>"control-label col-md-3"]) !!}
+        {!! Form::label("materialdetail","",["class"=>"control-label col-md-3"]) !!}
         <div class="col-md-6">
             {!! Form::text("materialdetail",null,["class"=>"form-control required","id"=>"focus"]) !!}
             <span id="materialdetail-error" class="help-block"></span>
         </div>
     </div>
     <div class="form-group required col-md-6" id="form-materialdetail1-error">
-        {!! Form::label("materialdetail1","প্রোডাক্ট কোডঃ",["class"=>"control-label col-md-3"]) !!}
+        {!! Form::label("materialdetail1","material name",["class"=>"control-label col-md-3"]) !!}
         <div class="col-md-6">
             {!! Form::text("materialdetail1",null,["class"=>"form-control required","id"=>"focus"]) !!}
             <span id="materialdetail1-error" class="help-block"></span>
